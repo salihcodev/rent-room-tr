@@ -10,6 +10,7 @@ import PricingPage from "./views/pricing/Pricing.page";
 
 // COMPONENTS IMPORTS::==>
 import Navbar from "./components/navbar/Navbar.component";
+import Footer from "./components/footer/Footer.component";
 
 // UTILITIES IMPORTS::==>
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -37,6 +38,8 @@ function App() {
           <NotFoundPage />
         </Route>
       </Switch>
+
+      <Footer />
     </div>
   );
 }
