@@ -5,6 +5,7 @@ import React from "react";
 import Header from "../../components/header/Header.component";
 import CompanyPhilosophy from "../../components/philosophy/CompanyPhilosophy.component";
 import PlansWrapper from "../../components/plans/PlansWrapper.component";
+import Testimonials from "../../components/testimonials/Testimonials.component";
 
 // UTILITIES IMPORTS::==>
 
@@ -15,6 +16,8 @@ const HomePage = () => {
   // home required data:
   // header:
   const HeaderTitle = "Let us give you a nice bed!";
+  const HeaderDescription =
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, cum aliquid odit corrupti, quos praesentium, repellat asperiores voluptate a sit vitae provident ipsa beatae quae voluptas quidem maiores deleniti delectus.a sit vitae provident ipsa beatae quae voluptas quidem maiores deleniti delectus.";
 
   // about section:
   const AboutTitle = "hello from about company";
@@ -79,14 +82,19 @@ const HomePage = () => {
         title={HeaderTitle}
         btn1="return to home"
         btn2="browse rooms"
-      ></Header>
+      >
+        {HeaderDescription}
+      </Header>
 
       {/* ABOUT THE COMPANY */}
       <CompanyPhilosophy aboutTitle={AboutTitle} aboutContext={AboutText} />
 
       {/* PLANS */}
       <PlansWrapper plansData={plansData} />
-    </>
+
+      {/* Testimonials */}
+      <Testimonials />
+  </>
   );
 };
 
