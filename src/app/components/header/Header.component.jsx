@@ -12,14 +12,16 @@ import "./Header.component.style.scss";
 const Header = ({ img, title, btn1, btn2, children }) => {
   return (
     <MainHeader img={img} className="mainHeader">
-      <h2 className="headerHeading">{title}</h2>
-      <div className="headerBody">
-        <div className="headerContentWrapper">{children}</div>
-      </div>
-      <div className="buttons">
-        <div className="headerBtnsWrapper">
-          <button className="btn btn-warning">{btn1}</button>
-          <button className="btn btn-info">{btn2}</button>
+      <div className="container">
+        <h2 className="headerHeading">{title}</h2>
+        <div className="headerBody">
+          <div className="headerContentWrapper">{children}</div>
+        </div>
+        <div className="buttons">
+          <div className="headerBtnsWrapper">
+            <button className="btn btn-warning">{btn1}</button>
+            <button className="btn btn-info">{btn2}</button>
+          </div>
         </div>
       </div>
     </MainHeader>

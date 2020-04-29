@@ -8980,6 +8980,11 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
+react-elastic-carousel@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-elastic-carousel/-/react-elastic-carousel-0.4.1.tgz#6486fa7514f50fdc2af95277a6cfe860b0702020"
+  integrity sha512-lsaj7JD4ags55caRx8UlPpP+BvHEHbdT0RbawyzAJV/Aixsw6S3QkSBKi2v/utbtaVVRcr/euRr9UQOaK1wJXg==
+
 react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
