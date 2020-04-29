@@ -1,0 +1,39 @@
+section.PlanTemplate {
+  padding: 40px 10px;
+
+  .Plan {
+    margin-top: 50px;
+    border: 1px solid #dddd;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+
+    .PlanHeader {
+      .planIcon {
+        position: absolute;
+        width: 65px;
+        height: 65px;
+        background: aquamarine;
+        padding: 13px;
+        border-radius: 50%;
+        border: 7px solid #fff;
+        top: -17px;
+        left: -22px;
+      }
+    }
+    .planBody {
+      ul.featuresList {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li.feature {
+          border-bottom: 1px dashed #dddd;
+          padding: 2px 0;
+        }
+      }
+    }
+    .planFooter {
+    }
+  }
+}
