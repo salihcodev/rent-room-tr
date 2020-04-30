@@ -2,13 +2,13 @@
 import React from "react";
 
 // COMPONENTS IMPORTS::==>
-import NoteFoundFlag from "../../components/404Page/404Page.component";
+import NoteFoundFlag from "../../components/404NoteFound/404NoteFound.component";
 
 // UTILITIES IMPORTS::==>
 
 // COMPONENT IMPORTS::==>
 const NotFoundPage = () => {
-  const ErrorMsg = "sorry, you followed a broken links...";
+  const ErrorMsg = "you followed a broken links...";
   return (
     <>
       <NoteFoundFlag msgTxt={ErrorMsg}></NoteFoundFlag>
