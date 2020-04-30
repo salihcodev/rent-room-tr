@@ -1,12 +1,12 @@
 header.mainHeader {
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
 
   h2.headerHeading {
     text-align: center;
     color: #ffffff;
     font-size: 50px;
-    padding: 20px;
+    padding: 40px;
   }
 
   .headerBody {
@@ -21,6 +21,7 @@ header.mainHeader {
     height: 70px;
     justify-content: center;
     display: flex;
+    margin-top: 20px;
 
     button {
       padding: 8px 12px;

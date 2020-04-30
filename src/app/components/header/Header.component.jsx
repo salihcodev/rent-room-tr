@@ -11,7 +11,7 @@ import styled from "styled-components";
 import "./Header.component.style.scss";
 const Header = ({ img, title, btn1, btn2, children }) => {
   return (
-    <MainHeader img={img} className="mainHeader">
+    <MainHeader img={img ? img : null} className="mainHeader">
       <div className="container">
         <h2 className="headerHeading">{title}</h2>
         <div className="headerBody">
