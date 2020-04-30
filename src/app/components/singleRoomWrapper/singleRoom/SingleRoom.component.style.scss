@@ -1,0 +1,19 @@
+.singleRoom {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+
+  .card {
+    border-left: 0;
+    .cardImage {
+      margin-top: 27px;
+    }
+
+    .description {
+    }
+    .addInformation {
+      span.addInfo {
+        display: block;
+      }
+    }
+  }
+}

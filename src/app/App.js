@@ -7,6 +7,7 @@ import NotFoundPage from "./views/notFoundPage/404.page";
 import HomePage from "./views/homePage/Home.page";
 import ServicesPage from "./views/services/Services.page";
 import PricingPage from "./views/pricing/Pricing.page";
+import SingleRoom from "./views/singleRoom/SingleRoom.page";
 
 // COMPONENTS IMPORTS::==>
 import Navbar from "./components/navbar/Navbar.component";
@@ -26,11 +27,15 @@ function App() {
           <HomePage />
         </Route>
 
-        <Route path="/pricing">
+        <Route exact path="/pricing">
           <PricingPage />
         </Route>
 
-        <Route path="/services">
+        <Route exact path="/pricing/:sroom">
+          <SingleRoom />
+        </Route>
+
+        <Route exact path="/services">
           <ServicesPage />
         </Route>
 
