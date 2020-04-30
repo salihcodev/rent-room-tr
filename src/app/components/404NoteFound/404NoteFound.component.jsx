@@ -9,6 +9,7 @@ import React from "react";
 import "./404NotFound.component.style.scss";
 const NoteFoundFlag = ({ msgTxt }) => {
   return (
+    
     <>
       <section className="NoteFoundFlag">
         <div className="container">
