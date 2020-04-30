@@ -20,6 +20,7 @@ class AppProvider extends React.Component {
     SiteMap: SiteMap,
     allRooms: [],
     featuredRooms: [],
+    singleRoomInfo: {},
   };
 
   componentDidMount() {
@@ -42,12 +43,31 @@ class AppProvider extends React.Component {
     this.setState({
       allRooms,
       featuredRooms,
+      singleRoomInfo: this.getLocalSingleRoom(),
+    });
+  };
+
+  getLocalSingleRoom = () => {
+    let getSingleRoom = localStorage.getItem("singleRoom");
+
+    return getSingleRoom ? JSON.parse(getSingleRoom) : {};
+  };
+
+  setLocalSingleRoom = (id) => {
+    let sRoom = this.state.allRooms.find((sRoom) => sRoom.id === id);
+    // localStorage here
+    localStorage.setItem("singleRoom", JSON.stringify(sRoom));
+
+    this.setState({
+      singleRoomInfo: { ...sRoom },
     });
   };
 
   render() {
     return (
-      <AppContext.Provider value={{ ...this.state }}>
+      <AppContext.Provider
+        value={{ ...this.state, setLocalSingleRoom: this.setLocalSingleRoom }}
+      >
         {this.props.children}
       </AppContext.Provider>
     );

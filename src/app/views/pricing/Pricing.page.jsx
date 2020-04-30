@@ -14,7 +14,8 @@ class PricingPage extends React.Component {
   static contextType = AppContext;
   render() {
     const value = this.context;
-    const { featuredRooms, allRooms } = value;
+    const { featuredRooms, allRooms, singleRoomInfo } = value;
+    
     return (
       <>
         {/* Header */}
@@ -55,8 +56,8 @@ class PricingPage extends React.Component {
             <div className="row">
               {featuredRooms.map((room) => {
                 return (
-                  <div className="col-md-4">
-                    <RoomTemplate room={room} />
+                  <div className="col-md-4" key={room.id}>
+                    <RoomTemplate  room={room} />
                   </div>
                 );
               })}
@@ -71,7 +72,7 @@ class PricingPage extends React.Component {
             <div className="row">
               {allRooms.map((room) => {
                 return (
-                  <div className="col-md-3">
+                  <div className="col-md-3" key={room.id}>
                     <RoomTemplate room={room} />
                   </div>
                 );
