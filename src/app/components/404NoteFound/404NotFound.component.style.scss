@@ -1,0 +1,41 @@
+.NoteFoundFlag {
+  padding: 50px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  background: #eee;
+
+  .error {
+    padding: 50px 0;
+    border: 1px solid;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    background: linear-gradient(50deg, #15ffd18c, #80b8da)
+      /* , url("../../assets/rent-room.svg") center/cover; */;
+    border: 20px solid #ddd;
+    color: #eee;
+  }
+
+  .N404 {
+    font-size: 90px;
+    font-weight: bolder;
+  }
+  .notFoundDescription {
+    color: #555;
+    font-size: 20px;
+    span.sorry {
+      font-weight: bolder;
+    }
+  }
+}
