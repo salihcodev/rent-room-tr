@@ -8,10 +8,10 @@ import NoteFoundFlag from "../../components/404NoteFound/404NoteFound.component"
 
 // COMPONENT IMPORTS::==>
 const NotFoundPage = () => {
-  const ErrorMsg = "you followed a broken links...";
+  const ErrorMsg = " It seems you followed a broken links...";
   return (
     <>
-      <NoteFoundFlag msgTxt={ErrorMsg}></NoteFoundFlag>
+      <NoteFoundFlag msgTxt={ErrorMsg} />
     </>
   );
 };
