@@ -8,7 +8,7 @@ import Header from "../../components/header/Header.component";
 // UTILITIES IMPORTS::==>
 
 // COMPONENT IMPORTS::==>
-import HeaderImg from "../../assets/header/01.svg";
+import HeaderImg from "../../assets/components/header/pricing.svg";
 import "./Pricing.page.style.scss";
 class PricingPage extends React.Component {
   static contextType = AppContext;

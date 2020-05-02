@@ -11,7 +11,7 @@ import Testimonials from "../../components/testimonials/Testimonials.component";
 
 // COMPONENT IMPORTS::==>
 import "./Home.page.style.scss";
-import HeaderImg from "../../assets/imgs/defaultBcg.jpeg";
+import HeaderImg from "../../assets/components/header/home.svg";
 const HomePage = () => {
   // home required data:
   // header:
@@ -94,7 +94,7 @@ const HomePage = () => {
 
       {/* Testimonials */}
       <Testimonials />
-  </>
+    </>
   );
 };
 
