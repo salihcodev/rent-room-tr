@@ -6,6 +6,7 @@ import BrowsingLinks from "./BrowsingLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
 import SiteMap from "./SiteMap";
 import TestimonialsData from "./TestimonialsData";
+import ServicesData from "./ServicesData";
 import AllData from "./data";
 
 const AppContext = React.createContext();
@@ -17,6 +18,7 @@ class AppProvider extends React.Component {
     BrowsingLinks: BrowsingLinks,
     SocialMediaLinks: SocialMediaLinks,
     TestimonialsData: TestimonialsData,
+    ServicesData: ServicesData,
     SiteMap: SiteMap,
     allRooms: [],
     featuredRooms: [],
