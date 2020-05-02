@@ -8,6 +8,7 @@ import SiteMap from "./SiteMap";
 import TestimonialsData from "./TestimonialsData";
 import ServicesData from "./ServicesData";
 import AllData from "./data";
+import CompanyTimeLine from "./CompanyTimeLine";
 
 const AppContext = React.createContext();
 
@@ -19,6 +20,7 @@ class AppProvider extends React.Component {
     SocialMediaLinks: SocialMediaLinks,
     TestimonialsData: TestimonialsData,
     ServicesData: ServicesData,
+    CompanyTimeLine: CompanyTimeLine,
     SiteMap: SiteMap,
     allRooms: [],
     featuredRooms: [],

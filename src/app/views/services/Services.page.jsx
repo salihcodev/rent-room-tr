@@ -6,6 +6,7 @@ import { AppContext } from "../../context";
 import Header from "../../components/header/Header.component";
 import HeaderImg from "../../assets/imgs/defaultBcg.jpeg";
 import ServiceWrapper from "../../components/services/ServicesWrapper.component";
+import TimeLine from "../../components/timeline/TimeLine.component";
 
 // UTILITIES IMPORTS::==>
 
@@ -41,6 +42,9 @@ class Services extends React.Component {
 
         {/* SERVICES section */}
         <ServiceWrapper ServicesData={ServicesData} />
+
+        {/* TIMELINE */}
+        <TimeLine />
       </>
     );
   }
