@@ -9,7 +9,7 @@ import ContactUs from "../../components/contact/ContactUs.component";
 
 // COMPONENT IMPORTS::==>
 import "./Contact.page.style.scss";
-import HeaderImg from "../../assets/header/3198776.svg";
+import HeaderImg from "../../assets/components/header/contact.svg";
 const ContactPage = () => {
   // services required data:
   // header:

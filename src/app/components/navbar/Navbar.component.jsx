@@ -8,7 +8,7 @@ import { AppContext } from "../../context";
 import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
-import Logo from "../../assets/rent-room.svg";
+import Logo from "../../assets/appLogo.svg";
 import "./Navbar.component.style.scss";
 class Navbar extends React.Component {
   static contextType = AppContext;
