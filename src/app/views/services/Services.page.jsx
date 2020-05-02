@@ -4,7 +4,7 @@ import { AppContext } from "../../context";
 
 // COMPONENTS IMPORTS::==>
 import Header from "../../components/header/Header.component";
-import HeaderImg from "../../assets/imgs/defaultBcg.jpeg";
+import HeaderImg from "../../assets/components/header/services.svg";
 import ServiceWrapper from "../../components/services/ServicesWrapper.component";
 import TimeLine from "../../components/timeline/TimeLine.component";
 
