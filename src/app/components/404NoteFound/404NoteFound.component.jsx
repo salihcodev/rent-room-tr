@@ -9,14 +9,14 @@ import React from "react";
 import "./404NotFound.component.style.scss";
 const NoteFoundFlag = ({ msgTxt }) => {
   return (
+    
     <>
       <section className="NoteFoundFlag">
         <div className="container">
           <div className="error">
             <div>
-              <span className="N404">404</span>
               <p className="notFoundDescription">
-                <span className="sorry">sorry, </span>
+                <span className="sorry">sorry</span>,
                 {msgTxt}
               </p>
             </div>
