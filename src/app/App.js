@@ -5,7 +5,7 @@ import "./App.scss";
 // PAGES IMPORTS::==>
 import NotFoundPage from "./views/notFoundPage/404.page";
 import HomePage from "./views/homePage/Home.page";
-// import ServicesPage from "./views/services/Services.page";
+import ServicesPage from "./views/services/Services.page";
 import PricingPage from "./views/pricing/Pricing.page";
 import SingleRoom from "./views/singleRoom/SingleRoom.page";
 import ContactPage from "./views/contact/Contact.page";
@@ -41,7 +41,7 @@ function App() {
         </Route>
 
         <Route exact path="/services">
-          {/* <ServicesPage /> */}
+          <ServicesPage />
         </Route>
 
         <Route>
