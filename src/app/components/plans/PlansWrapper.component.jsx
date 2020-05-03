@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
 import "./PlansWrapper.component.style.scss";
-const PlansWrapper = ({ plansData }) => {
+const PlansWrapper = ({ PlansData }) => {
   return (
     <section className="plansWrapper">
       <div className="container">
         <h2 className="heading">Our Plans</h2>
-        <PlanTemplate servicesCost={plansData} />
+        <PlanTemplate servicesCost={PlansData} />
       </div>
     </section>
   );

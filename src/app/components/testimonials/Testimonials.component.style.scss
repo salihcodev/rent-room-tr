@@ -3,8 +3,7 @@ section.testimonials {
     padding: 50px 0;
 
     h2.heading {
-      padding: 5px;
-      margin: 20px 0 50px;
+      padding: 40px 30px 30px;
       color: #555;
     }
 
@@ -17,9 +16,9 @@ section.testimonials {
     .rec.rec-dot.rec.rec-dot_active {
       height: 8px;
       width: 8px;
-      background-color: #d8cb1280;
+      background-color: #3a8b91;
       transition: all 250ms ease;
-      box-shadow: 0 0 1px 3px #c4b427;
+      box-shadow: 0 0 1px 3px #3a6191;
     }
 
     .testimonial {
@@ -62,10 +61,13 @@ section.testimonials {
             text-transform: capitalize;
           }
           .text {
+            border: 1px solid #ddd9;
+            border-top: none;
+            border-right: none;
             padding: 10px;
             color: #888;
-            border-left: 2px solid #e2b212;
             font-style: italic;
+            border-radius: 4px;
           }
         }
       }

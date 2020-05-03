@@ -1,25 +1,33 @@
 section.PlanTemplate {
-  padding: 40px 10px;
+  padding: 0 10px;
 
   .Plan {
-    margin-top: 50px;
+    margin-top: 30px;
     border: 1px solid #dddd;
     border-radius: 15px;
     padding: 10px;
     position: relative;
 
+    .planIcon {
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(106deg, #96e7d7, #689db6, #3a6191);
+      border-radius: 50%;
+      border: 7px solid #fff;
+      top: -17px;
+      left: -22px;
+      font-size: 23px;
+      padding: 8px 10px 0 10px;
+      color: #eee;
+    }
     .PlanHeader {
-      .planIcon {
-        position: absolute;
-        width: 65px;
-        height: 65px;
-        background: aquamarine;
-        padding: 13px;
-        border-radius: 50%;
-        border: 7px solid #fff;
-        top: -17px;
-        left: -22px;
-      }
+      background: #ddd9;
+      padding: 30px;
+      font-size: 20px;
+      font-weight: bolder;
+      margin-bottom: 20px;
+      color: #444;
     }
     .planBody {
       ul.featuresList {
@@ -30,10 +38,26 @@ section.PlanTemplate {
         li.feature {
           border-bottom: 1px dashed #dddd;
           padding: 2px 0;
+          font-size: 15px;
         }
       }
     }
+    p.cost {
+      margin: 0;
+      margin-top: 12px;
+    }
+
+    small.role {
+      padding: 7px 0 15px 0;
+      display: block;
+    }
+
     .planFooter {
+      button {
+        padding: 4px 10px !important;
+        border: 1px solid #0f8165;
+        margin: 0 5px;
+      }
     }
   }
 }

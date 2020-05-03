@@ -1,5 +1,6 @@
 // BASIC IMPORTS::==>
 import React from "react";
+import { AppContext } from "../../context";
 
 // COMPONENTS IMPORTS::==>
 import Header from "../../components/header/Header.component";
@@ -12,90 +13,48 @@ import Testimonials from "../../components/testimonials/Testimonials.component";
 // COMPONENT IMPORTS::==>
 import "./Home.page.style.scss";
 import HeaderImg from "../../assets/components/header/home.svg";
-const HomePage = () => {
-  // home required data:
-  // header:
-  const HeaderTitle = "Let us give you a nice bed!";
-  const HeaderDescription =
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, cum aliquid odit corrupti, quos praesentium, repellat asperiores voluptate a sit vitae provident ipsa beatae quae voluptas quidem maiores deleniti delectus.a sit vitae provident ipsa beatae quae voluptas quidem maiores deleniti delectus.";
+class HomePage extends React.Component {
+  static contextType = AppContext;
+  render() {
+    const value = this.context;
+    const { PlansData } = value;
 
-  // about section:
-  const AboutTitle = "hello from about company";
-  const AboutText =
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt repudiandae quibusdam eius debitis quos explicabo!";
-  const plansData = [
-    {
-      id: 0,
-      planeName: "ultimate",
-      featuresList: [
-        "featureIndex: bar",
-        "featureOne: bar",
-        "featureTwo: bar",
-        "featureThree: bar",
-        "featureFour: bar",
-        "featureFive: bar",
-        "featureSix: bar",
-        "featureSeven: bar",
-      ],
-      ship: "ship Now",
-      planeCost: "$ 212",
-    },
-    {
-      id: 1,
-      planeName: "educational",
-      featuresList: [
-        "featureIndex: bar",
-        "featureOne: bar",
-        "featureTwo: bar",
-        "featureThree: bar",
-        "featureFour: bar",
-        "featureFive: bar",
-        "featureSix: bar",
-        "featureSeven: bar",
-      ],
-      ship: "ship Now",
-      planeCost: "$ 150",
-    },
-    {
-      id: 2,
-      planeName: "basic",
-      featuresList: [
-        "featureIndex: bar",
-        "featureOne: bar",
-        "featureTwo: bar",
-        "featureThree: bar",
-        "featureFour: bar",
-        "featureFive: bar",
-        "featureSix: bar",
-        "featureSeven: bar",
-      ],
-      ship: "ship Now",
-      planeCost: "$ 75",
-    },
-  ];
+    // home required data:
+    // header:
+    const HeaderTitle = "Let us give you a nice bed!";
+    const HeaderDescription =
+      "Presented with too many options, people might plan on thinking deeply about it and making a decision later. Once a visitor is off your site, however, they might come across another hotel they like while they do this. An immediate decision is always better.Landing pages are designed to drive immediate decisions. Landing pages have minimal menus, and no links to other pages or websites. The design and copy on these pages focus on one product or service, and their aim is to get people to convert. Instead of wasting time pondering, people are encouraged to book rooms immediately";
 
-  return (
-    <>
-      {/* HEADER */}
-      <Header
-        img={HeaderImg}
-        title={HeaderTitle}
-        btn1="return to home"
-        btn2="browse rooms"
-      >
-        {HeaderDescription}
-      </Header>
+    // about section:
+    const AboutTitle = "Company philosophy";
+    const AboutText =
+      "We’ve seen hotels with 3 or 4 different scrolling banners on their homepage, plus popups and other animations – that’s a distracting mess worthy of the late 90s.! people are encouraged to book rooms immediately";
 
-      {/* ABOUT THE COMPANY */}
-      <CompanyPhilosophy aboutTitle={AboutTitle} aboutContext={AboutText} />
+    return (
+      <>
+        {/* HEADER */}
+        <Header
+          img={HeaderImg}
+          title={HeaderTitle}
+          // returnToHomeBtn="returnToHomeBtn"
+          BrowseProductsBtn="browse products"
+          // goToContactsBtn="goToContactsBtn"
+          checkServicesBtn="our services"
+        >
+          {HeaderDescription}
+        </Header>
 
-      {/* PLANS */}
-      <PlansWrapper plansData={plansData} />
+        {/* ABOUT THE COMPANY */}
+        <CompanyPhilosophy aboutTitle={AboutTitle} aboutContext={AboutText} />
 
-      {/* Testimonials */}
-      <Testimonials />
-    </>
-  );
-};
+        {/* PLANS */}
+        <PlansWrapper PlansData={PlansData} />
+
+        {/* Testimonials */}
+        <Testimonials />
+      </>
+    );
+  }
+}
 
 export default HomePage;

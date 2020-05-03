@@ -9,6 +9,7 @@ import TestimonialsData from "./TestimonialsData";
 import ServicesData from "./ServicesData";
 import AllData from "./data";
 import CompanyTimeLine from "./CompanyTimeLine";
+import PlansData from "./PlansData";
 
 const AppContext = React.createContext();
 
@@ -21,6 +22,7 @@ class AppProvider extends React.Component {
     TestimonialsData: TestimonialsData,
     ServicesData: ServicesData,
     CompanyTimeLine: CompanyTimeLine,
+    PlansData: PlansData,
     SiteMap: SiteMap,
     allRooms: [],
     featuredRooms: [],
