@@ -16,21 +16,19 @@ const PlanTemplate = ({ servicesCost }) => {
           {servicesCost.map((plan) => (
             <div className="col" key={plan.id}>
               <div className="Plan">
-                <div className="PlanHeader">
-                  <div className="planIcon">icon</div>
-                  {plan.planeName}
-                </div>
+                <div className="planIcon">{plan.icon}</div>
+                <div className="PlanHeader">{plan.planeName}</div>
                 <div className="planBody">
                   <ul className="featuresList">
                     {plan.featuresList.map((feature) => (
                       <li className="feature">{feature}</li>
                     ))}
                   </ul>
-
-                  <p className="ship">{plan.ship}</p>
+                  <p className="cost">{plan.planeCost}</p>
+                  <small className="role text-muted">{plan.role}</small>
                 </div>
                 <div className="planFooter">
-                  <button className="btn btn-success ">{plan.planeCost}</button>
+                  <button className="btn btn-light ">ship now!</button>
                 </div>
               </div>
             </div>

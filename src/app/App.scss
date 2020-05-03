@@ -1,0 +1,6 @@
+// Global styles.
+* {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}

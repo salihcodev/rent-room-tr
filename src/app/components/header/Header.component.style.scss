@@ -22,10 +22,59 @@ header.mainHeader {
     justify-content: center;
     display: flex;
     margin-top: 20px;
+    align-items: flex-end;
+
 
     button {
-      padding: 8px 12px;
+      padding: 4px 10px !important;
       margin: 0 5px;
+      position: relative;
+
+      a {
+        color: #444;
+        text-decoration: none;
+      }
+
+      span.btnIcon {
+        position: absolute;
+        background: #0000001c;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 32px;
+        padding: 2px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      span.btnContext {
+        padding-left: 27px;
+        font-size: 16px;
+      }
+    }
+
+    button.returnToHomeBtn {
+      border: 1px solid #bc8f07;
+    }
+
+    button.BrowseProductsBtn {
+      border: 1px solid #d1e0e2;
+    }
+
+    button.goToContactsBtn {
+      border: 1px solid #111111;
+
+      a {
+        color: #eee;
+      }
+    }
+
+    button.checkServicesBtn {
+      border: 1px solid #0050a5;
+
+      a {
+        color: #eee;
+      }
     }
   }
 }
