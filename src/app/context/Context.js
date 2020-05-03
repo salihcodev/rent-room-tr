@@ -37,9 +37,10 @@ class AppProvider extends React.Component {
     let allRooms = allData.map((room) => {
       const { id } = room.sys;
       const img = room.fields.images[0].fields.file.url;
-      const CombinedData = { id, ...room.fields, img };
-
-      return CombinedData;
+      const images = room.fields.images.map((img) => {
+        return img.fields.file.url;
+      });
+      return { id, ...room.fields, img, images };
     });
 
     let featuredRooms = allRooms.filter((fRoom) => {
@@ -63,6 +64,11 @@ class AppProvider extends React.Component {
     let sRoom = this.state.allRooms.find((sRoom) => sRoom.id === id);
     // localStorage here
     localStorage.setItem("singleRoom", JSON.stringify(sRoom));
+    window.scrollTo({
+      top: 188,
+      left: 0,
+      behavior: "smooth",
+    });
 
     this.setState({
       singleRoomInfo: { ...sRoom },

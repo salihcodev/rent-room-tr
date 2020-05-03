@@ -5,18 +5,23 @@ import React from "react";
 
 // UTILITIES IMPORTS::==>
 import { Link } from "react-router-dom";
+import { AiFillStar } from "react-icons/ai";
+import { GoPackage } from "react-icons/go";
 
 // COMPONENT IMPORTS::==>
 import "./SingleRoom.component.style.scss";
 const SingleRoom = ({ singleRoomInfo }) => {
-
   return (
     <section className="singleRoom">
       <h2 className="heading">{singleRoomInfo.name}</h2>
       <div className="card mb-3">
         <div className="row no-gutters">
           <div className="col-md-5 cardImage">
-            <img src={singleRoomInfo.img} className="card-img" alt="..." />
+            <img
+              src={singleRoomInfo.img}
+              className="card-img"
+              alt={singleRoomInfo.name}
+            />
           </div>
           <div className="col-md-7">
             <div className="card-body">
@@ -42,7 +47,23 @@ const SingleRoom = ({ singleRoomInfo }) => {
                 </span>
               </p>
               <p className="card-text rating">
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <small className="text-muted">
+                  rating: {singleRoomInfo.rating} / 10
+                  <span className="star">
+                    {" "}
+                    <AiFillStar />
+                  </span>
+                </small>
+              </p>
+              <p className="orderRoom">
+                <button className="makeOrder btn btn-dark">
+                  <Link to="/contact">
+                    <span className="btnIcon">
+                      <GoPackage />{" "}
+                    </span>
+                    <span className="btnContext">make order</span>
+                  </Link>
+                </button>
               </p>
             </div>
           </div>

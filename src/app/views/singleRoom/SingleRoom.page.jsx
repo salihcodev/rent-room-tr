@@ -7,11 +7,15 @@ import SingleRoomWrapper from "../../components/singleRoomWrapper/SingleRoomWrap
 // UTILITIES IMPORTS::==>
 
 // COMPONENT IMPORTS::==>
+import "./SingleRoom.page.style.scss";
 const SingleRoom = () => {
   return (
-    <div>
-      <SingleRoomWrapper />
-    </div>
+    <section className="singleRoomPage">
+      <div className="container">
+        <h2 className="heading">welcome to single room viewer</h2>
+        <SingleRoomWrapper />
+      </div>
+    </section>
   );
 };
 
