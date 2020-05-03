@@ -91,6 +91,7 @@ export default Header;
 const MainHeader = styled.header`
   background: linear-gradient(90deg, #18b08d3d, #19467fe0),
     url(${(props) => props.img}) center/cover;
+  min-height: ${window.innerHeight - 90}px;
 
   .buttons {
     button.returnToHomeBtn {
@@ -103,8 +104,8 @@ const MainHeader = styled.header`
     button.goToContactsBtn {
       display: ${(props) => (props.goToContactsBtn ? "inline-block" : "none")};
     }
-    button.checkPlansBtn {
-      display: ${(props) => (props.checkPlansBtn ? "inline-block" : "none")};
+    button.checkServicesBtn {
+      display: ${(props) => (props.checkServicesBtn ? "inline-block" : "none")};
     }
   }
 `;

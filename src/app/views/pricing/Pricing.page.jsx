@@ -6,6 +6,7 @@ import RoomTemplate from "../../components/room/RoomTemplate.component";
 import Header from "../../components/header/Header.component";
 
 // UTILITIES IMPORTS::==>
+import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
 import HeaderImg from "../../assets/components/header/pricing.svg";
@@ -14,15 +15,18 @@ class PricingPage extends React.Component {
   static contextType = AppContext;
   render() {
     const value = this.context;
-    const { featuredRooms, allRooms, singleRoomInfo } = value;
-    
+    const { featuredRooms, allRooms } = value;
+
     return (
       <>
         {/* Header */}
         <Header
           img={""}
           title={"look! what we have done"}
-          btn1={"check prices plans"}
+          returnToHomeBtn={"back to home"}
+          // BrowseProductsBtn={"browse products"}
+          // goToContactsBtn={"keep in touch"}
+          checkServicesBtn={"check out services"}
         >
           <div className="container">
             <div className="row">
@@ -35,7 +39,6 @@ class PricingPage extends React.Component {
                     <p className="text">
                       Lorem ipsum dolor sit amet consectetur.
                     </p>
-                    <button className="wingBtn">rent one</button>
                   </div>
                 </div>
               </div>
@@ -57,7 +60,7 @@ class PricingPage extends React.Component {
               {featuredRooms.map((room) => {
                 return (
                   <div className="col-md-4" key={room.id}>
-                    <RoomTemplate  room={room} />
+                    <RoomTemplate room={room} />
                   </div>
                 );
               })}

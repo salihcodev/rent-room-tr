@@ -15,13 +15,11 @@ class SingleRoomWrapper extends React.Component {
   value = this.context;
   render() {
     const { singleRoomInfo } = this.value;
-  console.log(singleRoomInfo);
-
 
     return (
       <section className="singleRoomWrapper">
         <div className="container">
-          <SingleRoom singleRoomData={singleRoomInfo} />
+          <SingleRoom singleRoomInfo={singleRoomInfo} />
         </div>
       </section>
     );
