@@ -4,24 +4,26 @@ import React from "react";
 // COMPONENTS IMPORTS::==>
 
 // UTILITIES IMPORTS::==>
-import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
 import "./ServiceTemplate.component.style.scss";
 const ServiceTemplate = ({ Service }) => {
   return (
-    <section className="ServiceTemplate text-center">
+    <section className="ServiceTemplate ">
       <div className="container">
         <div className="row">
           {Service.map((service) => (
-            <div className="col-md-3" key={service.id}>
-              <div className="service">
-                <div className="serviceHeader">
-                  <div className="serviceIcon">icon</div>
-                  <h4>{service.planeName}</h4>
+            <div key={service.id} className="col-md-4">
+              <div className="card mb-3">
+                <div className="serviceIcon">{service.icon}</div>
+                <div className="serviceHeader card-header card-title">
+                  <h4>{service.serviceName}</h4>
                 </div>
-                <div className="serviceBody">
-                  <p className="ship">{service.ship}</p>
+                <div className="service card-body">
+                  <p class="card-text">{service.serviceDescription}</p>
+                  <div className="serviceBody">
+                    <small className="ship text-muted">availability: {service.availability}</small>
+                  </div>
                 </div>
               </div>
             </div>

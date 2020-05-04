@@ -5,7 +5,6 @@ import { AppContext } from "../../context";
 // COMPONENTS IMPORTS::==>
 
 // UTILITIES IMPORTS::==>
-import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
 import "./TimeLine.component.style.scss";
