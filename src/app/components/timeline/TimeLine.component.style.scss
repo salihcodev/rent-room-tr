@@ -10,14 +10,14 @@ section.timeline {
       padding: 20px 10px 10px 33px;
 
       .achieve {
-        background: #ddd9;
+        background: #ccc8;
         position: relative;
         color: #555;
         border: 0;
 
-        &:nth-of-type(odd) {
-          background: #ddd5;
-        }
+        // &:nth-of-type(odd) {
+        //   background: #ddd5;
+        // }
 
         &::before {
           content: "";
@@ -27,7 +27,7 @@ section.timeline {
           display: block;
           position: absolute;
           top: 40px;
-          left: -49px;
+          left: -48px;
           border-radius: 50%;
           border: 5px solid #333;
         }
@@ -39,7 +39,7 @@ section.timeline {
           top: 40px;
           left: -12px;
           border-top: 12px solid transparent;
-          border-right: 12px solid #ddd9;
+          border-right: 12px solid #ccc8;
           border-bottom: 12px solid transparent;
         }
       }

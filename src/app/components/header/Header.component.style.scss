@@ -15,6 +15,10 @@ header.mainHeader {
     justify-content: center;
     display: flex;
     align-items: center;
+
+    .headerContentWrapper {
+      font-size: 18px;
+    }
   }
 
   .buttons {
@@ -23,7 +27,6 @@ header.mainHeader {
     display: flex;
     margin-top: 20px;
     align-items: flex-end;
-
 
     button {
       padding: 4px 10px !important;
