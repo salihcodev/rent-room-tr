@@ -11,13 +11,11 @@ import ContactUs from "../../components/contact/ContactUs.component";
 import "./Contact.page.style.scss";
 import HeaderImg from "../../assets/components/header/contact.svg";
 const ContactPage = () => {
-  // services required data:
+  // contact required data:
   // header:
   const HeaderTitle = "Keep in touch!";
   const HeaderDescription =
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, cum aliquid odit corrupti, quos praesentium, repellat asperiores voluptate a sit vitae provident ipsa beatae quae voluptas quidem maiores deleniti delectus.a sit vitae provident ipsa beatae quae voluptas quidem maiores deleniti delectus.";
-
-  // about
 
   return (
     <>
@@ -30,9 +28,10 @@ const ContactPage = () => {
       >
         {HeaderDescription}
       </Header>
-
-      {/* ContactUs */}
-      <ContactUs />
+      <div className="container">
+        {/* ContactUs */}
+        <ContactUs />
+      </div>
     </>
   );
 };
