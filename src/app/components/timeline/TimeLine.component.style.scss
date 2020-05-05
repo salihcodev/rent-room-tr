@@ -1,0 +1,48 @@
+section.timeline {
+  padding: 50px 10px;
+
+  .timelineWrapper {
+    h2.heading {
+      padding: 20px 0;
+    }
+    .achievements {
+      border-left: 4px solid #333;
+      padding: 20px 10px 10px 33px;
+
+      .achieve {
+        background: #ccc8;
+        position: relative;
+        color: #555;
+        border: 0;
+
+        // &:nth-of-type(odd) {
+        //   background: #ddd5;
+        // }
+
+        &::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          background: #42a1ab;
+          display: block;
+          position: absolute;
+          top: 40px;
+          left: -48px;
+          border-radius: 50%;
+          border: 5px solid #333;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 40px;
+          left: -12px;
+          border-top: 12px solid transparent;
+          border-right: 12px solid #ccc8;
+          border-bottom: 12px solid transparent;
+        }
+      }
+    }
+  }
+}

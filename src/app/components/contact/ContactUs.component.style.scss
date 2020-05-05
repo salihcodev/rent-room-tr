@@ -1,0 +1,49 @@
+section.contactUS {
+  padding: 80px 0;
+
+  h2.heading {
+    padding: 40px 0;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+    outline: 0 !important;
+    box-shadow: none;
+    border-left: 4px solid #ddd9;
+  }
+
+  button.sendUserInfo {
+    border: 1px solid #0a388f;
+    padding: 4px 10px !important;
+    margin: 0 5px;
+    position: relative;
+
+    a {
+      color: #eee;
+      text-decoration: none;
+    }
+
+    span.btnIcon {
+      position: absolute;
+      background: #0000001c;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      padding: 2px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    span.btnContext {
+      padding-left: 27px;
+      font-size: 16px;
+    }
+  }
+}

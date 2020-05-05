@@ -1,0 +1,64 @@
+.singleRoom {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 60px 0 0 0;
+
+  .card {
+    border-left: 0;
+    .cardImage {
+      margin-top: 27px;
+    }
+
+    .room.description {
+      color: #666;
+    }
+
+    .addInformation {
+      span.addInfo {
+        display: block;
+      }
+    }
+    .rating {
+      small {
+        span.star {
+          font-size: 18px;
+          color: #ebc91c;
+        }
+      }
+    }
+
+    p.orderRoom {
+      display: flex;
+      justify-content: flex-end;
+
+      button.makeOrder {
+        border: 1px solid #111111;
+        padding: 4px 10px !important;
+        margin: 0 5px;
+        position: relative;
+
+        a {
+          color: #f8f8f8;
+          text-decoration: none;
+        }
+
+        span.btnIcon {
+          position: absolute;
+          background: #0000001c;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: 32px;
+          padding: 2px;
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+
+        span.btnContext {
+          padding-left: 27px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

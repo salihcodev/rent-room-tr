@@ -1,0 +1,48 @@
+header {
+  .pricingHeaderWing.leftWing {
+    .imgWing {
+      width: 252px;
+      height: 252px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .textWing {
+      button.wingBtn {
+        outline: 0;
+        padding: 8px 20px;
+        background: linear-gradient(131deg, #12a3be, #52a4cc, #0531409c);
+        border-radius: 3px;
+        color: #fff;
+        border: 0;
+      }
+    }
+  }
+
+  .pricingHeaderWing.rightWing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+// ROOMS:
+.roomWrapper {
+  margin-bottom: 70px;
+
+  h2.heading {
+    font-weight: bolder;
+    font-size: 37px;
+    color: #444;
+  }
+}
+.featuredRoomsWrapper {
+  margin-top: 70px;
+}
+
+.allRoomsWrapper {
+}
