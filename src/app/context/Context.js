@@ -11,6 +11,7 @@ const AppContext = React.createContext();
 const AppConsumer = AppContext.Consumer;
 class AppProvider extends React.Component {
   state = {
+    isSmall: true,
     BrowsingLinks: BrowsingLinks,
     SocialMediaLinks: SocialMediaLinks,
     Projects: Projects,
@@ -21,7 +22,13 @@ class AppProvider extends React.Component {
 
   render() {
     return (
-      <AppContext.Provider value={{ ...this.state }}>
+      <AppContext.Provider
+        value={{
+          ...this.state,
+          setLocalSingleRoom: this.setLocalSingleRoom,
+          navToggler: this.navToggler,
+        }}
+      >
         {this.props.children}
       </AppContext.Provider>
     );

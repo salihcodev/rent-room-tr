@@ -1,0 +1,24 @@
+.NoteFoundFlag {
+  background: #eee;
+
+  .error {
+    width: 100%;
+    height: 650px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    background: url("../../assets/components/pageNotFound/404notFound.svg") center/cover;
+    border-bottom: 20px solid #ccc4;
+    padding: 20px;
+  }
+
+  .notFoundDescription {
+    color: #555;
+    font-size: 20px;
+    span.sorry {
+      font-weight: bolder;
+    }
+  }
+}

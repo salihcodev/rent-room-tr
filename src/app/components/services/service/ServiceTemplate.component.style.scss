@@ -1,0 +1,40 @@
+section.ServiceTemplate {
+  padding: 0 10px 20px 0;
+
+  .card {
+    position: relative;
+    margin-top: 20px;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      box-shadow: 2px 1px 10px -2px #000000ad;
+    }
+
+    .serviceIcon {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: #dddd;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      top: -17px;
+      left: -22px;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .serviceHeader {
+      padding-left: 30px;
+      padding-bottom: 0;
+    }
+    .service {
+      .card-text {
+        color: #666;
+      }
+      .serviceBody {
+      }
+    }
+  }
+}
