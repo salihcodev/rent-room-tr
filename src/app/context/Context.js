@@ -75,10 +75,21 @@ class AppProvider extends React.Component {
     });
   };
 
+  // toggle alt navLinks:
+  navToggler = () => {
+    this.setState({
+      isSmall: !this.state.isSmall,
+    });
+  };
+
   render() {
     return (
       <AppContext.Provider
-        value={{ ...this.state, setLocalSingleRoom: this.setLocalSingleRoom }}
+        value={{
+          ...this.state,
+          setLocalSingleRoom: this.setLocalSingleRoom,
+          navToggler: this.navToggler,
+        }}
       >
         {this.props.children}
       </AppContext.Provider>
