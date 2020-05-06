@@ -4,7 +4,7 @@ import React from "react";
 // UTILITIES IMPORTS::==>
 import BrowsingLinks from "./BrowsingLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
-import SiteMap from "./SiteMap";
+import { Projects, Support, Company, companyExperience } from "./SiteMap";
 
 const AppContext = React.createContext();
 
@@ -13,7 +13,10 @@ class AppProvider extends React.Component {
   state = {
     BrowsingLinks: BrowsingLinks,
     SocialMediaLinks: SocialMediaLinks,
-    SiteMap: SiteMap,
+    Projects: Projects,
+    Support: Support,
+    Company: Company,
+    companyExperience: companyExperience,
   };
 
   render() {

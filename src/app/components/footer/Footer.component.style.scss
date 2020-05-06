@@ -1,46 +1,41 @@
 footer.footer {
-  padding: 20px 10px;
-  border-top: 1px solid #dddd;
+  padding: 20px 10px 0;
+  min-height: 200px;
 
   .footerWing {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    margin-top: 20px;
+    h5 {
+      color: #777;
+    }
   }
 
-  .copyrightsAndSocial {
+  .socialMedia {
     height: 100%;
+    padding: 5px 0;
 
-    .copyrights {
-      p.copyText {
-        display: inline-block;
-        padding: 5px;
-      }
-      a {
-        color: #e0480c;
-        padding: 5px;
-        padding-left: 0;
-      }
-    }
+    .emptyWrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      min-height: 100%;
 
-    .social {
       ul {
-        list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-
-        padding: 7px 20px;
+        list-style: none;
 
         li {
-          padding: 5px;
-          margin: 5px;
-          border-radius: 5px;
+          padding: 3px;
 
           a {
-            color: #666;
-            font-weight: bold;
-            text-transform: capitalize;
+            color: #555;
+            font-size: 20px;
+            transition: all ease 0.4s;
+
+            &:hover {
+              color: #1e8ab4;
+            }
           }
         }
       }
@@ -49,20 +44,110 @@ footer.footer {
 
   .footerLinks {
     height: 100%;
-    border-left: 1px solid #dddd;
     padding: 5px;
+
+    h6.colDescription {
+      color: #777;
+      padding: 2px 5px;
+      font-weight: bolder;
+      font-size: 13px;
+    }
 
     ul.siteMap {
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-top: 20px;
 
       li {
         padding: 3px 5px;
+        font-size: 14px;
+
         a {
           color: #666;
           text-transform: capitalize;
         }
+      }
+    }
+  }
+
+  .downloadApp {
+    height: 100%;
+    padding: 5px;
+
+    .downloadDesc {
+      color: #777;
+      font-size: 13px;
+    }
+
+    .emptyWrapper {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      display: flex;
+    }
+
+    .downBox {
+      border: 1px solid;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 8px;
+      width: 100%;
+      background-size: cover;
+      height: 60px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 990px) {
+      .downBox {
+        width: 110px;
+      }
+    }
+
+    .androidBox {
+      background-image: url("../../assets/footer/googlePlayLogo.svg");
+    }
+    .iosBox {
+      background-image: url("../../assets/footer/appStore.svg");
+    }
+  }
+
+  .lastFooter {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    padding: 15px 0;
+
+    .policyAndPrivacy {
+      display: flex;
+      justify-content: flex-start;
+
+      p.policy {
+        color: #555;
+
+        a {
+          color: #555;
+          padding: 2px 5px;
+          transition: all ease 0.3s;
+
+          &:not(:first-of-type) {
+            border-left: 1px solid #ccc;
+          }
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+    .copyrightsWrapper {
+      display: flex;
+      justify-content: flex-end;
+
+      a.author {
+        padding: 0 5px;
+        color: #426b9e;
       }
     }
   }
