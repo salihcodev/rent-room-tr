@@ -4,6 +4,9 @@ import React from "react";
 // UTILITIES IMPORTS::==>
 import BrowsingLinks from "./BrowsingLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
+import TestimonialsData from "./TestimonialsData";
+import ServicesData from "./ServicesData";
+import PlansData from "./PlansData";
 import { Projects, Support, Company, companyExperience } from "./SiteMap";
 
 const AppContext = React.createContext();
@@ -15,6 +18,9 @@ class AppProvider extends React.Component {
     BrowsingLinks: BrowsingLinks,
     SocialMediaLinks: SocialMediaLinks,
     Projects: Projects,
+    TestimonialsData: TestimonialsData,
+    PlansData: PlansData,
+    ServicesData: ServicesData,
     Support: Support,
     Company: Company,
     companyExperience: companyExperience,
