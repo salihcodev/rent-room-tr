@@ -7,6 +7,7 @@ import BrowsingLinks from "./BrowsingLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
 import TestimonialsData from "./TestimonialsData";
 import ServicesData from "./ServicesData";
+import CompanyTimeLine from "./CompanyTimeLine";
 import PlansData from "./PlansData";
 import { Projects, Support, Company, companyExperience } from "./SiteMap";
 
@@ -16,18 +17,19 @@ const AppConsumer = AppContext.Consumer;
 class AppProvider extends React.Component {
   state = {
     isSmall: true,
-    BrowsingLinks: BrowsingLinks,
-    SocialMediaLinks: SocialMediaLinks,
-    Projects: Projects,
-    TestimonialsData: TestimonialsData,
-    PlansData: PlansData,
-    ServicesData: ServicesData,
-    Support: Support,
-    Company: Company,
     companyExperience: companyExperience,
-    allRooms: [],
-    featuredRooms: [],
+    SocialMediaLinks: SocialMediaLinks,
+    TestimonialsData: TestimonialsData,
+    CompanyTimeLine: CompanyTimeLine,
+    BrowsingLinks: BrowsingLinks,
+    ServicesData: ServicesData,
+    PlansData: PlansData,
+    Projects: Projects,
+    Company: Company,
+    Support: Support,
     singleRoomInfo: {},
+    featuredRooms: [],
+    allRooms: [],
   };
 
   componentDidMount() {
