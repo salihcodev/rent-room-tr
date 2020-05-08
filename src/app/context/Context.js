@@ -2,13 +2,14 @@
 import React from "react";
 
 // UTILITIES IMPORTS::==>
-import AllData from "./data";
+// import AllData from "./data";
 import BrowsingLinks from "./BrowsingLinks";
 import SocialMediaLinks from "./SocialMediaLinks";
 import TestimonialsData from "./TestimonialsData";
 import ServicesData from "./ServicesData";
 import CompanyTimeLine from "./CompanyTimeLine";
 import PlansData from "./PlansData";
+import { client } from "./Contentful";
 import { Projects, Support, Company, companyExperience } from "./SiteMap";
 
 const AppContext = React.createContext();
@@ -33,17 +34,22 @@ class AppProvider extends React.Component {
   };
 
   componentDidMount() {
-    this.fetchData(AllData); //allData
+    client
+      .getEntries({
+        content_type: "rentRoomTr",
+      })
+      .then((response) => this.fetchData(response.items))
+      .catch(console.error);
+
+    // this.fetchData(); //allData
   }
 
   fetchData = (allData) => {
     let allRooms = allData.map((room) => {
       const { id } = room.sys;
-      const img = room.fields.images[0].fields.file.url;
-      const images = room.fields.images.map((img) => {
-        return img.fields.file.url;
-      });
-      return { id, ...room.fields, img, images };
+      const img = room.fields.image.fields.file.url;
+
+      return { id, ...room.fields, img };
     });
 
     let featuredRooms = allRooms.filter((fRoom) => {
