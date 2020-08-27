@@ -5,7 +5,6 @@ import { AppContext } from "../../context";
 // COMPONENTS IMPORTS::==>
 import Header from "../../components/header/Header.component";
 import CompanyPhilosophy from "../../components/philosophy/CompanyPhilosophy.component";
-import PlansWrapper from "../../components/plans/PlansWrapper.component";
 // import Testimonials from "../../components/testimonials/Testimonials.component";
 
 // UTILITIES IMPORTS::==>
@@ -16,8 +15,7 @@ import HeaderImg from "../../assets/components/header/home.svg";
 class HomePage extends React.Component {
   static contextType = AppContext;
   render() {
-    const value = this.context;
-    const { PlansData } = value;
+
 
     // home required data:
     // header:
@@ -48,7 +46,6 @@ class HomePage extends React.Component {
         <CompanyPhilosophy aboutTitle={AboutTitle} aboutContext={AboutText} />
 
         {/* PLANS */}
-        <PlansWrapper PlansData={PlansData} />
 
         {/* Testimonials */}
         {/* <Testimonials /> */}

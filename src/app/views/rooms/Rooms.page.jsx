@@ -1,22 +1,21 @@
 // BASIC IMPORTS::==>
 import React from "react";
-import { AppContext } from "../../context";
+import { AppContext } from "../../context/Context";
 // COMPONENTS IMPORTS::==>
 import RoomTemplate from "../../components/room/RoomTemplate.component";
 import Header from "../../components/header/Header.component";
-import PlansWrapper from "../../components/plans/PlansWrapper.component";
 
 // UTILITIES IMPORTS::==>
 import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
 import HeaderImg from "../../assets/components/header/pricing.svg";
-import "./Pricing.page.style.scss";
-class PricingPage extends React.Component {
+import "./Rooms.page.style.scss";
+class RoomsPage extends React.Component {
   static contextType = AppContext;
   render() {
     const value = this.context;
-    const { featuredRooms, allRooms, PlansData } = value;
+    const { featuredRooms, allRooms } = value;
 
     return (
       <>
@@ -53,11 +52,40 @@ class PricingPage extends React.Component {
           </div>
         </Header>
 
-        {/* plans */}
-        <PlansWrapper PlansData={PlansData} />
+        {/* Featured */}
+        <section className="featuredRoomsWrapper roomWrapper">
+          <div className="container">
+            <h2 className="heading">featured rooms</h2>
+            <div className="row">
+              {featuredRooms.map((room) => {
+                return (
+                  <div className="col-md-4" key={room.id}>
+                    <RoomTemplate room={room} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* All */}
+        <section className="allRoomsWrapper roomWrapper">
+          <div className="container">
+            <h2 className="heading">all rooms</h2>
+            <div className="row">
+              {allRooms.map((room) => {
+                return (
+                  <div className="col-md-3" key={room.id}>
+                    <RoomTemplate room={room} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </>
     );
   }
 }
 
-export default PricingPage;
+export default RoomsPage;

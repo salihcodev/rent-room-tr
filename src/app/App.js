@@ -9,6 +9,7 @@ import ServicesPage from "./views/services/Services.page";
 import PricingPage from "./views/pricing/Pricing.page";
 import SingleRoom from "./views/singleRoom/SingleRoom.page";
 import ContactPage from "./views/contact/Contact.page";
+import RoomsPage from "./views/rooms/Rooms.page";
 
 // COMPONENTS IMPORTS::==>
 // import Navbar from "./components/navbar/Navbar.component";
@@ -36,7 +37,11 @@ function App() {
           <ContactPage />
         </Route>
 
-        <Route exact path="/pricing/:sroom">
+        <Route exact path="/rooms">
+          <RoomsPage />
+        </Route>
+
+        <Route exact path="/rooms/:sroom">
           <SingleRoom />
         </Route>
 
