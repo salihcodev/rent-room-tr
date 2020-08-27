@@ -6,7 +6,7 @@ import { AppContext } from "../../context";
 import Header from "../../components/header/Header.component";
 import CompanyPhilosophy from "../../components/philosophy/CompanyPhilosophy.component";
 import PlansWrapper from "../../components/plans/PlansWrapper.component";
-import Testimonials from "../../components/testimonials/Testimonials.component";
+// import Testimonials from "../../components/testimonials/Testimonials.component";
 
 // UTILITIES IMPORTS::==>
 
@@ -51,7 +51,7 @@ class HomePage extends React.Component {
         <PlansWrapper PlansData={PlansData} />
 
         {/* Testimonials */}
-        <Testimonials />
+        {/* <Testimonials /> */}
       </>
     );
   }
