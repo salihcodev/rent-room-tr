@@ -20,14 +20,8 @@ class Services extends React.Component {
 
     // home required data:
     // header:
-    const HeaderTitle = "";
-    const HeaderDescription =
-      "welcome to our services page, here you gonna meet company provided services and the time line of the company within last few years!!.";
-
     // services section:
     const ServicesTitle = "what we are providing";
-    const ServicesText =
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus sapiente qui modi perferendis dicta, earum accusantium quis aliquid! Voluptatibus aliquid ducimus dolorum nesciunt repudiandae quibusdam eius debitis quos explicabo!";
 
     return (
       <>
@@ -35,26 +29,16 @@ class Services extends React.Component {
           {/* HEADER */}
           <Header
             img={HeaderImg}
-            title={HeaderTitle}
+            title={ServicesTitle}
             returnToHomeBtn="back to home"
-            BrowseProductsBtn="return to room"
+            BrowseProductsBtn="return to rooms"
           >
-            {HeaderDescription}
           </Header>
+          {/* SERVICES section */}
+          <ServiceWrapper ServicesData={ServicesData} />
 
-          <div className="container">
-            {/* MAIN HEADING AND PAGE DESCRIPTION */}
-            <div className="pageDescription text-center">
-              <h2 className="heading">{ServicesTitle}</h2>
-              <p className="description">{ServicesText}</p>
-            </div>
-
-            {/* SERVICES section */}
-            <ServiceWrapper ServicesData={ServicesData} />
-
-            {/* TIMELINE */}
-            <TimeLine />
-          </div>
+          {/* TIMELINE */}
+          <TimeLine />
         </section>
       </>
     );

@@ -16,41 +16,19 @@ class PricingPage extends React.Component {
   static contextType = AppContext;
   render() {
     const value = this.context;
-    const { featuredRooms, allRooms, PlansData } = value;
+    const { PlansData } = value;
 
     return (
       <>
         {/* Header */}
         <Header
-          img={""}
-          title={"look! what we have done"}
+          img={HeaderImg}
+          title={"Check out our pricing plans"}
           returnToHomeBtn={"back to home"}
           // BrowseProductsBtn={"browse products"}
           // goToContactsBtn={"keep in touch"}
           checkServicesBtn={"check out services"}
         >
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <div className="pricingHeaderWing leftWing">
-                  <div className="imgWing">
-                    <img src={HeaderImg} alt="img" />
-                  </div>
-                  <div className="textWing">
-                    <p className="text">
-                      Lorem ipsum dolor sit amet consectetur.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col">
-                <div className="pricingHeaderWing rightWing">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tempora quae eum excepturi?
-                </div>
-              </div>
-            </div>
-          </div>
         </Header>
 
         {/* plans */}

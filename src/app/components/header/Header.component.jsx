@@ -51,7 +51,7 @@ const Header = ({
             </button>
 
             <button className="btn BrowseProductsBtn btn-light">
-              <Link to="pricing">
+              <Link to="rooms">
                 <span className="btnIcon">
                   <RiProfileLine />
                 </span>
@@ -89,8 +89,7 @@ const Header = ({
 export default Header;
 // i used styled component just for get benefit of using props inside <style>.
 const MainHeader = styled.header`
-  background: linear-gradient(90deg, #18b08d3d, #19467fe0),
-    url(${(props) => props.img}) center/cover;
+  background: url(${(props) => props.img}) center/cover;
   min-height: ${window.innerHeight - 90}px;
 
   .buttons {
@@ -99,7 +98,7 @@ const MainHeader = styled.header`
     }
     button.BrowseProductsBtn {
       display: ${(props) =>
-        props.BrowseProductsBtn ? "inline-block" : "none"};
+    props.BrowseProductsBtn ? "inline-block" : "none"};
     }
     button.goToContactsBtn {
       display: ${(props) => (props.goToContactsBtn ? "inline-block" : "none")};

@@ -9,7 +9,6 @@ import { FiMaximize2 } from "react-icons/fi";
 import { AiFillStar } from "react-icons/ai";
 
 // COMPONENT IMPORTS::==>
-
 import "./RoomTemplate.component.style.scss";
 class RoomTemplate extends React.Component {
   static contextType = AppContext;

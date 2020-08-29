@@ -20,8 +20,6 @@ class HomePage extends React.Component {
     // home required data:
     // header:
     const HeaderTitle = "Let us give you a nice bed!";
-    const HeaderDescription =
-      "Presented with too many options, people might plan on thinking deeply about it and making a decision later. Once a visitor is off your site, however, they might come across another hotel they like while they do this. An immediate decision is always better.Landing pages are designed to drive immediate decisions. Landing pages have minimal menus, and no links to other pages or websites. The design and copy on these pages focus on one product or service, and their aim is to get people to convert. Instead of wasting time pondering, people are encouraged to book rooms immediately";
 
     // about section:
     const AboutTitle = "Company philosophy";
@@ -35,17 +33,14 @@ class HomePage extends React.Component {
           img={HeaderImg}
           title={HeaderTitle}
           // returnToHomeBtn="returnToHomeBtn"
-          BrowseProductsBtn="browse products"
+          BrowseProductsBtn="browse rooms"
           // goToContactsBtn="goToContactsBtn"
           checkServicesBtn="our services"
         >
-          {HeaderDescription}
         </Header>
 
         {/* ABOUT THE COMPANY */}
         <CompanyPhilosophy aboutTitle={AboutTitle} aboutContext={AboutText} />
-
-        {/* PLANS */}
 
         {/* Testimonials */}
         {/* <Testimonials /> */}

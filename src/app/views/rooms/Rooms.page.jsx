@@ -9,7 +9,7 @@ import Header from "../../components/header/Header.component";
 import { Link } from "react-router-dom";
 
 // COMPONENT IMPORTS::==>
-import HeaderImg from "../../assets/components/header/pricing.svg";
+import HeaderImg from "../../assets/components/header/rooms.svg";
 import "./Rooms.page.style.scss";
 class RoomsPage extends React.Component {
   static contextType = AppContext;
@@ -21,7 +21,7 @@ class RoomsPage extends React.Component {
       <>
         {/* Header */}
         <Header
-          img={""}
+          img={HeaderImg}
           title={"look! what we have done"}
           returnToHomeBtn={"back to home"}
           // BrowseProductsBtn={"browse products"}
@@ -29,25 +29,11 @@ class RoomsPage extends React.Component {
           checkServicesBtn={"check out services"}
         >
           <div className="container">
-            <div className="row">
-              <div className="col">
-                <div className="pricingHeaderWing leftWing">
-                  <div className="imgWing">
-                    <img src={HeaderImg} alt="img" />
-                  </div>
-                  <div className="textWing">
-                    <p className="text">
-                      Lorem ipsum dolor sit amet consectetur.
-                    </p>
-                  </div>
+            <div className="col">
+              <div className="pricingHeaderWing rightWing">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora quae eum excepturi?
                 </div>
-              </div>
-              <div className="col">
-                <div className="pricingHeaderWing rightWing">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Tempora quae eum excepturi?
-                </div>
-              </div>
             </div>
           </div>
         </Header>
