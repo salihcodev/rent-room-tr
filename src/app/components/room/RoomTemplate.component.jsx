@@ -38,7 +38,7 @@ class RoomTemplate extends React.Component {
         </div>
 
         <Link
-          to={`/pricing/${room.id}`}
+          to={`/rooms/${room.id}`}
           className="roomViewer"
           onClick={() => {
             setLocalSingleRoom(room.id);

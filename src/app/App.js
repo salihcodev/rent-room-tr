@@ -29,19 +29,19 @@ function App() {
           <HomePage />
         </Route>
 
-        <Route exact path="/pricing">
-          <PricingPage />
-        </Route>
-
         <Route exact path="/contact">
           <ContactPage />
+        </Route>
+
+        <Route exact path="/pricing">
+          <PricingPage />
         </Route>
 
         <Route exact path="/rooms">
           <RoomsPage />
         </Route>
 
-        <Route exact path="/rooms/:sroom">
+        <Route exact path="/rooms/:singleRoom">
           <SingleRoom />
         </Route>
 
