@@ -1,4 +1,4 @@
-This project was hosted on [netlify](https://wwww.netlify.com) by the domain of [rentRoom](https://www.rent-room-tr.netlify.com).
+This project was hosted on [netlify](https://netlify.com) by the domain of [rentRoom](https://rent-room-tr.netlify.com).
 
 ## Clone the sourcecode
 
