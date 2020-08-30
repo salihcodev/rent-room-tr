@@ -1,0 +1,141 @@
+nav.navBar {
+  height: 70px;
+  position: relative;
+  background: #f7f4f4;
+  padding: 10px 5px;
+
+  .wing {
+    height: inherit;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .togglerAndLogoContainer {
+    .toggler {
+      display: none;
+      background: none;
+      border: none;
+      outline: none;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          height: 2px;
+          width: 30px;
+          background: #333;
+          margin: 5px 0;
+        }
+      }
+    }
+    .logoCont {
+      height: 100%;
+      width: 120%;
+
+      a.logo {
+        background: url("../../assets/appLogo.svg") center/contain no-repeat;
+        height: 100%;
+        width: 100px;
+        display: block;
+      }
+    }
+  }
+
+  .linksList {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        margin: 0 5px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 10px;
+          background: #bfb1b1;
+          top: 11px;
+          left: 0;
+          width: 0;
+          z-index: -1;
+          transform: rotate(-2deg);
+          transition: all ease-in-out 0.3s;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .loginBtn {
+    justify-content: flex-end;
+
+    span.welcome {
+      color: #666;
+      font-size: 14px;
+    }
+
+    button.loginBtn {
+      border: 1px solid #181818;
+      padding: 4px 10px !important;
+      margin: 0 5px;
+      position: relative;
+
+      a {
+        color: #eee;
+        text-decoration: none;
+      }
+
+      span.btnIcon {
+        position: absolute;
+        background: #0000001c;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 32px;
+        padding: 2px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      span.btnContext {
+        padding-left: 27px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// GLOBAL NAV LINKS:
+li.navLink {
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+// MEDIA QUERY:
+@media (max-width: 786px) {
+  nav.navBar {
+    .togglerAndLogoContainer {
+      .toggler {
+        display: block !important;
+      }
+    }
+
+    .linksList {
+      display: none;
+    }
+  }
+}

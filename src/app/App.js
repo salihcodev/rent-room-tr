@@ -12,7 +12,7 @@ import ContactPage from "./views/contact/Contact.page";
 import RoomsPage from "./views/rooms/Rooms.page";
 
 // COMPONENTS IMPORTS::==>
-// import Navbar from "./components/navbar/Navbar.component";
+import Navbar from "./components/navbar/Navbar.component";
 import Footer from "./components/footer/Footer.component";
 
 // UTILITIES IMPORTS::==>
@@ -23,7 +23,7 @@ import { Switch, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <HomePage />
