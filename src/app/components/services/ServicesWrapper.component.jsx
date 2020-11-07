@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import "./ServicesWrapper.component.style.scss";
 const ServiceWrapper = ({ ServicesData }) => {
   return (
-    <section className="servicesWrapper">
+    <section className="servicesWrapper container">
       <h2 className="heading">our provided services</h2>
       <ServiceTemplate Service={ServicesData} />
     </section>

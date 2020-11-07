@@ -1,6 +1,7 @@
+@import "../../style/_vars.sass";
+
 header.mainHeader {
-  width: 100vw;
-  min-height: 100vh;
+  min-height: 102vh;
   padding: 50px 0;
 
   h2.headerHeading {
@@ -31,14 +32,25 @@ header.mainHeader {
     margin-top: 20px;
     align-items: flex-end;
 
-    button {
+    a {
+      color: $alt-cl-4;
+      text-decoration: none;
       padding: 4px 10px !important;
       margin: 0 5px;
       position: relative;
-
-      a {
-        color: #444;
-        text-decoration: none;
+      min-width: 12rem;
+      min-height: 3rem;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 5rem;
+      overflow: hidden;
+      background: #eeeddd;
+      transition: all $fast-transition;
+      
+      &:hover {
+        margin: 0 2rem;
+        transform: scale(1.1) translate(0, -1rem);
       }
 
       span.btnIcon {
@@ -51,35 +63,34 @@ header.mainHeader {
         padding: 2px;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       span.btnContext {
         padding-left: 27px;
         font-size: 16px;
       }
-    }
 
-    button.returnToHomeBtn {
-      border: 1px solid #bc8f07;
-    }
-
-    button.BrowseProductsBtn {
-      border: 1px solid #d1e0e2;
-    }
-
-    button.goToContactsBtn {
-      border: 1px solid #111111;
-
-      a {
-        color: #eee;
+      &.returnToHomeBtn {
+        border: 2px solid $off-white;
+        background: $off-white;
       }
-    }
 
-    button.checkServicesBtn {
-      border: 1px solid #0050a5;
-
-      a {
-        color: #eee;
+      &.BrowseProductsBtn {
+        border: 2px solid $off-white;
+        background: $off-white;
+      }
+      &.goToContactsBtn {
+        border: 2px solid $off-white;
+        background: $off-white;
+        // color: #eee;
+      }
+      &.checkServicesBtn {
+        border: 2px solid $off-white;
+        background: $off-white;
+        // color: #eee;
       }
     }
   }

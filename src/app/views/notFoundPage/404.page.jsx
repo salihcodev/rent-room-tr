@@ -2,7 +2,7 @@
 import React from "react";
 
 // COMPONENTS IMPORTS::==>
-import NoteFoundFlag from "../../components/404NoteFound/404NoteFound.component";
+import NoteFoundFlag from "../../components/404NotFound/404NoteFound.component";
 
 // UTILITIES IMPORTS::==>
 

@@ -1,3 +1,5 @@
+@import "../../style/_vars.sass";
+
 section.timeline {
   padding: 50px 10px;
 
@@ -14,18 +16,33 @@ section.timeline {
         position: relative;
         color: #555;
         border: 0;
+        transition: all $fast-transition;
 
-        // &:nth-of-type(odd) {
-        //   background: #ddd5;
-        // }
+        &:nth-of-type(odd) {
+          background: #222;
+          color: $light-gray;
+
+          &::after {
+            border-right: 12px solid #222 !important;
+          }
+        }
+
+        &:hover {
+          transform: translate(1rem, 0);
+
+          &::before {
+            transform: translate(-1rem, 0);
+          }
+        }
 
         &::before {
           content: "";
           width: 25px;
           height: 25px;
-          background: #42a1ab;
+          background: $alt-cl-4;
           display: block;
           position: absolute;
+          transition: all $fast-transition;
           top: 40px;
           left: -48px;
           border-radius: 50%;

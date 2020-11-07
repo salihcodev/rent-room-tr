@@ -40,45 +40,37 @@ const Header = ({
         </div>
         <div className="buttons">
           <div className="headerBtnsWrapper">
-            <button className="btn returnToHomeBtn btn-warning">
-              <Link to="/">
-                <span className="btnIcon">
-                  <TiArrowBackOutline />
-                </span>
-                <span className="btnContext">{returnToHomeBtn}</span>
-                <span className="arrow"></span>
-              </Link>
-            </button>
+            <Link to="/" className="returnToHomeBtn">
+              <span className="btnIcon">
+                <TiArrowBackOutline />
+              </span>
+              <span className="btnContext">{returnToHomeBtn}</span>
+              <span className="arrow"></span>
+            </Link>
 
-            <button className="btn BrowseProductsBtn btn-light">
-              <Link to="rooms">
-                <span className="btnIcon">
-                  <RiProfileLine />
-                </span>
-                <span className="btnContext">{BrowseProductsBtn}</span>
-                <span className="arrow"></span>
-              </Link>
-            </button>
+            <Link to="rooms" className="BrowseProductsBtn">
+              <span className="btnIcon">
+                <RiProfileLine />
+              </span>
+              <span className="btnContext">{BrowseProductsBtn}</span>
+              <span className="arrow"></span>
+            </Link>
 
-            <button className="btn goToContactsBtn btn-dark">
-              <Link to="contact">
-                <span className="btnIcon">
-                  <TiContacts />
-                </span>
-                <span className="btnContext">{goToContactsBtn}</span>
-                <span className="arrow"></span>
-              </Link>
-            </button>
+            <Link to="contact" className="goToContactsBtn">
+              <span className="btnIcon">
+                <TiContacts />
+              </span>
+              <span className="btnContext">{goToContactsBtn}</span>
+              <span className="arrow"></span>
+            </Link>
 
-            <button className="btn checkServicesBtn btn-primary">
-              <Link to="services">
-                <span className="btnIcon">
-                  <TiChartBarOutline />
-                </span>
-                <span className="btnContext">{checkServicesBtn}</span>
-                <span className="arrow"></span>
-              </Link>
-            </button>
+            <Link to="services" className="checkServicesBtn">
+              <span className="btnIcon">
+                <TiChartBarOutline />
+              </span>
+              <span className="btnContext">{checkServicesBtn}</span>
+              <span className="arrow"></span>
+            </Link>
           </div>
         </div>
       </div>
@@ -93,18 +85,17 @@ const MainHeader = styled.header`
   min-height: ${window.innerHeight - 90}px;
 
   .buttons {
-    button.returnToHomeBtn {
-      display: ${(props) => (props.returnToHomeBtn ? "inline-block" : "none")};
+    a.returnToHomeBtn {
+      display: ${(props) => (props.returnToHomeBtn ? "inline-flex" : "none")};
     }
-    button.BrowseProductsBtn {
-      display: ${(props) =>
-    props.BrowseProductsBtn ? "inline-block" : "none"};
+    a.BrowseProductsBtn {
+      display: ${(props) => (props.BrowseProductsBtn ? "inline-flex" : "none")};
     }
-    button.goToContactsBtn {
-      display: ${(props) => (props.goToContactsBtn ? "inline-block" : "none")};
+    a.goToContactsBtn {
+      display: ${(props) => (props.goToContactsBtn ? "inline-flex" : "none")};
     }
-    button.checkServicesBtn {
-      display: ${(props) => (props.checkServicesBtn ? "inline-block" : "none")};
+    a.checkServicesBtn {
+      display: ${(props) => (props.checkServicesBtn ? "inline-flex" : "none")};
     }
   }
 `;

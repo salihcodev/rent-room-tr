@@ -1,3 +1,5 @@
+@import "../../../style/_vars.sass";
+
 section.PlanTemplate {
   padding: 0 10px;
 
@@ -7,6 +9,10 @@ section.PlanTemplate {
     border-radius: 15px;
     padding: 10px;
     position: relative;
+    transition: $fast-transition;
+    &:hover {
+      transform: scale(1.05) translate(0, -2rem);
+    }
 
     .planIcon {
       position: absolute;
