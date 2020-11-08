@@ -6,7 +6,6 @@ import { AppContext } from "../../context";
 import Header from "../../components/header/Header.component";
 import HeaderImg from "../../assets/components/header/services.svg";
 import ServiceWrapper from "../../components/services/ServicesWrapper.component";
-import TimeLine from "../../components/timeline/TimeLine.component";
 
 // UTILITIES IMPORTS::==>
 
@@ -22,9 +21,10 @@ class Services extends React.Component {
     // header:
     // services section:
     const ServicesTitle = "what we are providing";
+    document.title = `Rent Room | services`;
 
     return (
-      <>
+      <main className="contactPage">
         <section className="servicesPage">
           {/* HEADER */}
           <Header
@@ -32,15 +32,11 @@ class Services extends React.Component {
             title={ServicesTitle}
             returnToHomeBtn="back to home"
             BrowseProductsBtn="return to rooms"
-          >
-          </Header>
+          ></Header>
           {/* SERVICES section */}
           <ServiceWrapper ServicesData={ServicesData} />
-
-          {/* TIMELINE */}
-          <TimeLine />
         </section>
-      </>
+      </main>
     );
   }
 }

@@ -38,7 +38,6 @@ nav.navBar {
       display: none;
       background: none;
       border: none;
-      outline: none;
 
       ul {
         margin: 0;
@@ -57,7 +56,6 @@ nav.navBar {
       height: 100%;
       width: 100%;
       margin-left: 0.5rem;
-      margin-top: 0.1rem;
 
       a.logo {
         height: 100%;
@@ -110,6 +108,7 @@ nav.navBar {
 
   .loginBtn {
     justify-content: flex-end;
+    transition: all $fast-transition;
     a.loginBtn {
       border: none;
       border-radius: 5rem;

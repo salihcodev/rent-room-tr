@@ -10,6 +10,7 @@ section.PlanTemplate {
     padding: 10px;
     position: relative;
     transition: $fast-transition;
+
     &:hover {
       transform: scale(1.05) translate(0, -2rem);
     }
@@ -18,17 +19,17 @@ section.PlanTemplate {
       position: absolute;
       width: 65px;
       height: 65px;
-      background: linear-gradient(106deg, #96e7d7, #689db6, #3a6191);
       border-radius: 50%;
       border: 7px solid #fff;
       top: -17px;
       left: -22px;
       font-size: 23px;
       padding: 8px 10px 0 10px;
-      color: #eee;
+      background: linear-gradient(131deg, #d3ad6b, #e7ac45);
+      color: $off-white;
     }
     .PlanHeader {
-      background: #ddd9;
+      background: $off-white;
       padding: 30px;
       font-size: 20px;
       font-weight: bolder;
@@ -42,8 +43,8 @@ section.PlanTemplate {
         list-style: none;
 
         li.feature {
-          border-bottom: 1px dashed #dddd;
-          padding: 2px 0;
+          border-bottom: 1px solid $off-white;
+          padding: 0.6rem;
           font-size: 15px;
         }
       }
@@ -60,9 +61,17 @@ section.PlanTemplate {
 
     .planFooter {
       button {
-        padding: 4px 10px !important;
-        border: 1px solid #0f8165;
-        margin: 0 5px;
+        color: $off-white;
+        background: linear-gradient(131deg, #d3ad6b, #e7ac45);
+        border: 1px solid $off-white;
+        border-radius: 5rem;
+        min-width: 8rem;
+        min-height: 2rem;
+        padding: 0.4rem;
+        transition: ease-in-out 0.2s;
+        text-decoration: none;
+        text-align: center;
+        margin: 2rem 0 1rem;
       }
     }
   }

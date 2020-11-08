@@ -2,7 +2,6 @@
 import React from "react";
 import { AppContext } from "../../context";
 // COMPONENTS IMPORTS::==>
-import RoomTemplate from "../../components/room/RoomTemplate.component";
 import Header from "../../components/header/Header.component";
 import PlansWrapper from "../../components/plans/PlansWrapper.component";
 
@@ -18,8 +17,9 @@ class PricingPage extends React.Component {
     const value = this.context;
     const { PlansData } = value;
 
+    document.title = `Rent Room | Pricing`;
     return (
-      <>
+      <main className="contactPage">
         {/* Header */}
         <Header
           img={HeaderImg}
@@ -28,12 +28,11 @@ class PricingPage extends React.Component {
           // BrowseProductsBtn={"browse products"}
           // goToContactsBtn={"keep in touch"}
           checkServicesBtn={"check out services"}
-        >
-        </Header>
+        ></Header>
 
         {/* plans */}
         <PlansWrapper PlansData={PlansData} />
-      </>
+      </main>
     );
   }
 }

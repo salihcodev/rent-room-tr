@@ -19,19 +19,23 @@ const Navbar = () => {
   let btnColor;
   switch (currentLocation) {
     case "/contact":
-      btnColor = "#786697";
+      btnColor = "#d0566a";
       break;
 
     case "/rooms":
-      btnColor = "#32665c";
-      break;
-
-    case "/services":
-      btnColor = "#375d70";
+      btnColor = "#486770";
       break;
 
     case "/pricing":
-      btnColor = "#505b69";
+      btnColor = "#d0993a";
+      break;
+
+    case "/services":
+      btnColor = "#2f6365";
+      break;
+
+    case "/":
+      btnColor = "#202130";
       break;
 
     default:

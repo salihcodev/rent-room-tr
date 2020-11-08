@@ -1,24 +1,54 @@
+@import "../../style/_vars.sass";
+
 section.roomTemplate {
-  margin: 20px 0;
-  position: relative;
+  margin: 3rem 0;
   overflow: hidden;
-  transition: all ease-in-out 0.3s;
+  transition: all $fast-transition;
+  border: none;
+  min-height: 15rem;
 
   &:hover {
-    box-shadow: 2px 4px 10px -4px black;
+    box-shadow: 2px 4px 10px -4px #222;
+    z-index: 10;
+    transform: scale(1.05) translate(0, -1rem);
 
     .roomViewer {
-      opacity: 0.6;
+      transform: translate(-50%, -100%) scale(1.2) !important;
     }
+  }
+
+  .imgCont {
+    position: relative;
 
     img {
-      animation: delayGrow 6s;
+      width: 100%;
+    }
+
+    .roomViewer {
+      transition: opacity ease-in-out 0.3s;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 5px solid #d3d1d1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      position: absolute;
+      opacity: 0.7;
+      background: #fff;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      transition: all $fast-transition;
     }
   }
-
-  img {
-    filter: blur(1.5px);
+  .skewedImgCont {
+    background: url("../../assets/room-container-cover.svg") center/cover;
+    min-height: 3rem;
   }
+
   .card-body {
     overflow: hidden;
     .roomContext {
@@ -35,37 +65,5 @@ section.roomTemplate {
         color: #ebc91c;
       }
     }
-  }
-
-  .roomViewer {
-    transition: opacity ease-in-out 0.3s;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 5px solid #d3d1d1;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -270%);
-    opacity: 0;
-    background: #fff;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #444;
-  }
-}
-
-// IMAGE ANIMATION:
-@keyframes delayGrow {
-  0% {
-    transform: scale(1);
-    filter: blur(1.5px);
-  }
-
-  100% {
-    transform: scale(1.2);
-    filter: blur(0);
   }
 }

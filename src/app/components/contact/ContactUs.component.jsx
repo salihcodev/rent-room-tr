@@ -89,14 +89,12 @@ const ContactUs = () => {
             </label>
           </div>
         </div>
-        <button type="submit" className="btn btn-primary sendUserInfo">
-          <a href="#">
-            <span className="btnIcon">
-              <RiProfileLine />{" "}
-            </span>
-            <span className="btnContext">send your information</span>
-          </a>
-        </button>
+        <a href="#" type="submit" className="sendUserInfo" role="button">
+          <span className="btnIcon">
+            <RiProfileLine />{" "}
+          </span>
+          <span className="btnContext">send your information</span>
+        </a>
       </form>
     </section>
   );

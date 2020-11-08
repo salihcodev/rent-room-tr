@@ -34,7 +34,7 @@ const Header = ({
       className="mainHeader"
     >
       <div className="container">
-        <h2 className="headerHeading">{title}</h2>
+        <h1 className="headerHeading">{title}</h1>
         <div className="headerBody">
           <div className="headerContentWrapper">{children}</div>
         </div>
@@ -86,16 +86,16 @@ const MainHeader = styled.header`
 
   .buttons {
     a.returnToHomeBtn {
-      display: ${(props) => (props.returnToHomeBtn ? "inline-flex" : "none")};
+      display: ${(props) => (props.returnToHomeBtn ? "flex" : "none")};
     }
     a.BrowseProductsBtn {
-      display: ${(props) => (props.BrowseProductsBtn ? "inline-flex" : "none")};
+      display: ${(props) => (props.BrowseProductsBtn ? "flex" : "none")};
     }
     a.goToContactsBtn {
-      display: ${(props) => (props.goToContactsBtn ? "inline-flex" : "none")};
+      display: ${(props) => (props.goToContactsBtn ? "flex" : "none")};
     }
     a.checkServicesBtn {
-      display: ${(props) => (props.checkServicesBtn ? "inline-flex" : "none")};
+      display: ${(props) => (props.checkServicesBtn ? "flex" : "none")};
     }
   }
 `;

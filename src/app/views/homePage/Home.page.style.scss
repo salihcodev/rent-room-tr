@@ -1,14 +1,2 @@
-header {
-  .buttons {
-    .btn1 {
-      padding: 4px 10px !important;
-      border: 1px solid #bc8f07;
-      color: #444;
-    }
 
-    .btn2 {
-      padding: 4px 10px !important;
-      border: 1px solid #0c6d7c;
-    }
-  }
-}
+@import "../../style/_vars.sass";

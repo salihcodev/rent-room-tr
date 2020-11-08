@@ -4,7 +4,7 @@ header.mainHeader {
   min-height: 102vh;
   padding: 50px 0;
 
-  h2.headerHeading {
+  h1.headerHeading {
     text-align: center;
     color: #eeeddd;
     padding: 40px;
@@ -26,11 +26,11 @@ header.mainHeader {
   }
 
   .buttons {
-    height: 70px;
     justify-content: center;
     display: flex;
     margin-top: 20px;
-    align-items: flex-end;
+    min-height: 10rem;
+    align-items: center;
 
     a {
       color: $alt-cl-4;
@@ -47,10 +47,10 @@ header.mainHeader {
       overflow: hidden;
       background: #eeeddd;
       transition: all $fast-transition;
-      
+      margin: 1.5rem 0;
+
       &:hover {
-        margin: 0 2rem;
-        transform: scale(1.1) translate(0, -1rem);
+        transform: scale(1.1) translate(0, -0.5rem);
       }
 
       span.btnIcon {
@@ -72,26 +72,14 @@ header.mainHeader {
         padding-left: 27px;
         font-size: 16px;
       }
+    }
+  }
+}
 
-      &.returnToHomeBtn {
-        border: 2px solid $off-white;
-        background: $off-white;
-      }
-
-      &.BrowseProductsBtn {
-        border: 2px solid $off-white;
-        background: $off-white;
-      }
-      &.goToContactsBtn {
-        border: 2px solid $off-white;
-        background: $off-white;
-        // color: #eee;
-      }
-      &.checkServicesBtn {
-        border: 2px solid $off-white;
-        background: $off-white;
-        // color: #eee;
-      }
+@media screen and (max-width: 768px) {
+  header.mainHeader {
+    h1.headerHeading {
+      font-size: 50px;
     }
   }
 }

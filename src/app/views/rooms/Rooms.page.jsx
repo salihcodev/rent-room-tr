@@ -17,8 +17,9 @@ class RoomsPage extends React.Component {
     const value = this.context;
     const { featuredRooms, allRooms } = value;
 
+    document.title = `Rent Room | Our Rooms`;
     return (
-      <>
+      <main className="contactPage">
         {/* Header */}
         <Header
           img={HeaderImg}
@@ -31,9 +32,9 @@ class RoomsPage extends React.Component {
           <div className="container">
             <div className="col">
               <div className="pricingHeaderWing rightWing">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempora quae eum excepturi?
-                </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                quae eum excepturi?
+              </div>
             </div>
           </div>
         </Header>
@@ -41,15 +42,20 @@ class RoomsPage extends React.Component {
         {/* Featured */}
         <section className="featuredRoomsWrapper roomWrapper">
           <div className="container">
-            <h2 className="heading">featured rooms</h2>
-            <div className="row">
-              {featuredRooms.map((room) => {
-                return (
-                  <div className="col-md-4" key={room.id}>
-                    <RoomTemplate room={room} />
-                  </div>
-                );
-              })}
+            <div className="roomsBlock">
+              <h2 className="heading">featured rooms</h2>
+              <div className="row">
+                {featuredRooms.map((room) => {
+                  return (
+                    <div
+                      className="col-xl-4 col-lg-4 col-md-6 col-xs-12"
+                      key={room.id}
+                    >
+                      <RoomTemplate room={room} />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
@@ -57,19 +63,21 @@ class RoomsPage extends React.Component {
         {/* All */}
         <section className="allRoomsWrapper roomWrapper">
           <div className="container">
-            <h2 className="heading">all rooms</h2>
-            <div className="row">
-              {allRooms.map((room) => {
-                return (
-                  <div className="col-md-3" key={room.id}>
-                    <RoomTemplate room={room} />
-                  </div>
-                );
-              })}
+            <div className="roomsBlock">
+              <h2 className="heading">all rooms</h2>
+              <div className="row">
+                {allRooms.map((room) => {
+                  return (
+                    <div className="col-lg-3 col-md-6 col-xs-12" key={room.id}>
+                      <RoomTemplate room={room} />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
-      </>
+      </main>
     );
   }
 }

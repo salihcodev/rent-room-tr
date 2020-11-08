@@ -15,21 +15,20 @@ const ContactPage = () => {
   // header:
   const HeaderTitle = "Keep in touch!";
 
-
+  document.title = `Rent Room | Contact Us`;
   return (
-    <>
+    <main className="contactPage">
       {/* HEADER */}
       <Header
         img={HeaderImg}
         title={HeaderTitle}
         returnToHomeBtn="return to home"
-      >
-      </Header>
+      ></Header>
       <div className="container">
         {/* ContactUs */}
         <ContactUs />
       </div>
-    </>
+    </main>
   );
 };
 

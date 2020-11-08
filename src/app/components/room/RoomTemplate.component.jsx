@@ -10,32 +10,13 @@ import { AiFillStar } from "react-icons/ai";
 
 // COMPONENT IMPORTS::==>
 import "./RoomTemplate.component.style.scss";
-class RoomTemplate extends React.Component {
-  static contextType = AppContext;
-  value = this.context;
-  render() {
-    const { room } = this.props;
-    const { setLocalSingleRoom } = this.value;
+const RoomTemplate = ({ room, featured }) => {
+  const { setLocalSingleRoom } = React.useContext(AppContext);
 
-    return (
-      <section className="roomTemplate card">
-        <img src={room.img} className="card-img-top" alt={room.name} />
-        <div className="card-body">
-          <h5 className="card-title">
-            <div className="roomTitle">{room.name}</div>
-          </h5>
-          <p className="card-text roomContext text-muted">{room.extras}</p>
-          <p className="card-text rating">
-            <small className="text-muted">
-              rating: {room.rating} / 10
-              <span className="star">
-                {" "}
-                <AiFillStar />
-              </span>
-            </small>
-          </p>
-        </div>
-
+  return (
+    <section className="roomTemplate card">
+      <div className="imgCont">
+        <img src={room.img} className="" alt={room.name} />
         <Link
           to={`/rooms/${room.id}`}
           className="roomViewer"
@@ -45,9 +26,27 @@ class RoomTemplate extends React.Component {
         >
           <FiMaximize2 />
         </Link>
-      </section>
-    );
-  }
-}
+      </div>
+      <div className="skewedImgCont">
+        
+      </div>
+      <div className="card-body">
+        <h5 className="card-title">
+          <div className="roomTitle">{room.name}</div>
+        </h5>
+        <p className="card-text roomContext text-muted">{room.extras}</p>
+        <p className="card-text rating">
+          <small className="text-muted">
+            rating: {room.rating} / 10
+            <span className="star">
+              {" "}
+              <AiFillStar />
+            </span>
+          </small>
+        </p>
+      </div>
+    </section>
+  );
+};
 
 export default RoomTemplate;

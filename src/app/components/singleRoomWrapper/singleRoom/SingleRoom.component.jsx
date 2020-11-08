@@ -11,6 +11,7 @@ import { GoPackage } from "react-icons/go";
 // COMPONENT IMPORTS::==>
 import "./SingleRoom.component.style.scss";
 const SingleRoom = ({ singleRoomInfo }) => {
+  document.title = `Room | ${singleRoomInfo.name || `rent room service`}`;
   return (
     <section className="singleRoom">
       <h2 className="heading">{singleRoomInfo.name}</h2>
@@ -56,14 +57,12 @@ const SingleRoom = ({ singleRoomInfo }) => {
                 </small>
               </p>
               <p className="orderRoom">
-                <button className="makeOrder btn btn-dark">
-                  <Link to="/contact">
-                    <span className="btnIcon">
-                      <GoPackage />{" "}
-                    </span>
-                    <span className="btnContext">make order</span>
-                  </Link>
-                </button>
+                <Link to="/contact" className="makeOrder">
+                  <span className="btnIcon">
+                    <GoPackage />
+                  </span>
+                  <span className="btnContext">make order</span>
+                </Link>
               </p>
             </div>
           </div>
